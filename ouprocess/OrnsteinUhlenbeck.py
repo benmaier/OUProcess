@@ -57,9 +57,8 @@ if __name__=="__main__":
     bins = np.linspace(-L/2.,L/2.,11) 
     bins_mean = 0.5*(bins[1:]+bins[:-1])
 
-    for t_ in xrange(len(t)):
-        #vals,bins = np.histogram(X[t_,:],bins=bins,normed=True)
-        mean_sqr_disp =  
-        pl.plot(t,X[:,0])
+    #for t_ in xrange(len(t)):
+    #    #vals,bins = np.histogram(X[t_,:],bins=bins,normed=True)
+    #    pl.plot(t,X[t_,:])
 
     pl.show()

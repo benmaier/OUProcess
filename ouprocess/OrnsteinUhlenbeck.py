@@ -25,10 +25,10 @@ class OrnsteinUhlenbeck:
             self.X[t,:] = self.X[t-1,:] + \
                           self.V*(self.r-self.X[t-1,:]) * self.dt + \
                           self.factor_B * np.random.randn(self.N)
-            ndcs_left  = np.nonzero(self.X[t,:]<-L/2)[0]
-            ndcs_right = np.nonzero(self.X[t,:]>+L/2)[0]
-            self.X[t,ndcs_left] += L
-            self.X[t,ndcs_right] -= L
+            ndcs_left  = np.nonzero(self.X[t,:]<-self.L/2)[0]
+            ndcs_right = np.nonzero(self.X[t,:]>+self.L/2)[0]
+            self.X[t,ndcs_left] += self.L
+            self.X[t,ndcs_right] -= self.L
 
 
     def get_trajectories(self):
